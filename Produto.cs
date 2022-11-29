@@ -29,5 +29,14 @@ namespace produtosExemploClassMetod
                 + " unidades, Total: $"
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
+        public void AdicionarProdutos(int quantidade)
+        {
+            Quantidade += quantidade;
+        }
+
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
     }
 }
