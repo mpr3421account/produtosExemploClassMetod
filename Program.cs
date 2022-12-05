@@ -1,17 +1,28 @@
 ﻿using produtosExemploClassMetod;
 using System.Globalization;
 
+Produto produto = new Produto("TV", 100.0, 10);
 
 
-Console.WriteLine("Entre com os dados do produto:");
+produto.SetName("TV 4K");//alterando o nome pelo método Set
+
+Console.WriteLine(produto.GetName());
+Console.WriteLine(produto.GetPreco());
+
+
+
+
+
+
+/*Console.WriteLine("Entre com os dados do produto:");
 Console.Write("Nome: ");
 string nome = Console.ReadLine();
 Console.Write("Preço: ");
 double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-//Console.Write("Quantidade no estoque: ");
-//int quantidade = int.Parse(Console.ReadLine());
+Console.Write("Quantidade no estoque: ");
+int quantidade = int.Parse(Console.ReadLine());
 
-Produto p = new Produto(nome,preco);
+Produto p = new Produto(nome,preco, quantidade);
 
 Console.WriteLine();
 
@@ -30,3 +41,4 @@ qte = int.Parse(Console.ReadLine());
 p.RemoverProdutos(qte);
 Console.WriteLine();
 Console.WriteLine("Dados Atualizados: " + p);
+*/

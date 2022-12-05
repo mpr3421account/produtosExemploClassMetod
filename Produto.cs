@@ -10,47 +10,69 @@ namespace produtosExemploClassMetod
 {
     internal class Produto
     {
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
+
+        public Produto()
+        {
+        }
+
+
 
         public Produto(string nome, double preco, int quantidade)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
+            _nome = nome;
+            _preco = preco;
+            _quantidade = quantidade;
         }
 
-        public Produto(string nome, double preco)
+        public string GetName()
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = 5;
+            return _nome;
         }
+
+        public void SetName(string nome)
+        {
+            if(nome != null && nome.Length > 1)
+            {
+                _nome = nome;
+            }
+        }
+
+        public double GetPreco()
+        {
+            return _preco;
+        }
+        public int GetQuantidade()
+        {
+            return _quantidade;
+        }
+
 
         public double ValorTotalEmEstoque()
         {
-            return Preco * Quantidade;
+            return _preco * _quantidade;
         }
 
         public override string ToString()
         {
-            return Nome
+            return _nome
                 + ", $"
-                + Preco.ToString("F2", CultureInfo.InvariantCulture)
+                + _preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
-                + Quantidade
+                + _quantidade
                 + " unidades, Total: $"
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
         public void AdicionarProdutos(int quantidade)
         {
-            Quantidade += quantidade;
+            _quantidade += quantidade;
         }
 
         public void RemoverProdutos(int quantidade)
         {
-            Quantidade -= quantidade;
+            _quantidade -= quantidade;
         }
     }
 }
