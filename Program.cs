@@ -4,7 +4,7 @@ using System.Globalization;
 Produto produto = new Produto("TV", 100.0, 10);
 
 
-produto.Nome = "T";//alterando o nome pelo método Set
+produto.Nome = "TV 4K";//alterando o nome pelo método Set
 
 Console.WriteLine(produto.Nome);
 Console.WriteLine(produto.Preco);
